@@ -16,7 +16,7 @@ import {
     useScrollTrigger,
 } from "@mui/material";
 import Link from "next/link";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import { useEffect, useState } from "react";
 import { navigateToTop } from "../../utility/navigateToTop";
 import { pages, siteName, navbar } from "../../siteInfo";
@@ -165,7 +165,7 @@ const Navbar = () => {
                                         fontSize: "1.75rem",
                                         flexGrow: 1,
                                         fontWeight: 700,
-                                        color: lightTheme.palette.custom.dark,
+                                        color: theme.palette.custom.dark,
                                     }}
                                 >
                                     <Link href="/" style={{ color: "inherit" }}>
@@ -198,12 +198,10 @@ const Navbar = () => {
                                             transition: "150ms",
                                             color:
                                                 "/" + currentPage === "/"
-                                                    ? lightTheme.palette.custom
-                                                          .light
-                                                    : lightTheme.palette.custom
-                                                          .dark,
+                                                    ? theme.palette.custom.light
+                                                    : theme.palette.custom.dark,
                                             "&:hover": {
-                                                color: lightTheme.palette.custom
+                                                color: theme.palette.custom
                                                     .light,
                                             },
                                         }}
@@ -243,16 +241,16 @@ const Navbar = () => {
                                                                 color:
                                                                     currentPage ===
                                                                     page.href
-                                                                        ? lightTheme
+                                                                        ? theme
                                                                               .palette
                                                                               .custom
                                                                               .light
-                                                                        : lightTheme
+                                                                        : theme
                                                                               .palette
                                                                               .custom
                                                                               .dark,
                                                                 "&:hover": {
-                                                                    color: lightTheme
+                                                                    color: theme
                                                                         .palette
                                                                         .custom
                                                                         .light,
@@ -341,13 +339,13 @@ const Navbar = () => {
                                                                                                     margin: ".5em 0",
                                                                                                     transition:
                                                                                                         "150ms",
-                                                                                                    color: lightTheme
+                                                                                                    color: theme
                                                                                                         .palette
                                                                                                         .custom
                                                                                                         .dark,
                                                                                                     "&:hover":
                                                                                                         {
-                                                                                                            color: lightTheme
+                                                                                                            color: theme
                                                                                                                 .palette
                                                                                                                 .custom
                                                                                                                 .light,

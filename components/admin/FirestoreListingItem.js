@@ -6,7 +6,7 @@ import { db, storage } from "../../firebase";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
 import { galleryCategories } from "../../siteInfo";
 
@@ -67,7 +67,7 @@ const FirestoreListingItem = ({
             {!isExpanded ? (
                 <Box
                     sx={{
-                        border: lightTheme.border,
+                        border: theme.border,
                         padding: ".5em",
                         margin: ".5em 0",
                         cursor: "pointer",
@@ -82,7 +82,7 @@ const FirestoreListingItem = ({
             ) : (
                 <Box
                     sx={{
-                        border: lightTheme.border,
+                        border: theme.border,
                         padding: ".5em",
                         margin: ".5em 0",
                         display: "flex",

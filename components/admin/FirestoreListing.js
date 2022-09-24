@@ -1,7 +1,7 @@
 import { Box, Input, Typography } from "@mui/material";
 import React, { useState } from "react";
 import useGetImages from "../../hooks/useGetImages";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import FirestoreListingItem from "./FirestoreListingItem";
 
 const FirestoreListing = ({
@@ -27,7 +27,7 @@ const FirestoreListing = ({
     return (
         <Box
             sx={{
-                backgroundColor: lightTheme.palette.primary.main,
+                backgroundColor: theme.palette.primary.main,
                 padding: "1em",
                 borderRadius: "5px",
                 height: "100%",

@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import NativeImage from "../general/NativeImage";
 import SizedImage from "../general/SizedImage";
 
@@ -117,7 +117,7 @@ const HomeGallery = ({ images }) => {
                 <Grid item xs={12}>
                     <Box
                         sx={{
-                            background: lightTheme.palette.background.default,
+                            background: theme.palette.background.default,
                             position: "relative",
                             zIndex: "40",
                             padding: "10rem 0",

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import lightTheme from "../styles/themes/lightTheme";
+import theme from "../styles/themes/theme";
 import { pages } from "../siteInfo";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -31,9 +31,9 @@ const Sidebar = ({ side, light }) => {
                             color:
                                 path === page.href
                                     ? "black"
-                                    : lightTheme.palette.custom.darkMuted,
+                                    : theme.palette.custom.darkMuted,
                             "&:hover": {
-                                color: lightTheme.palette.custom.dark,
+                                color: theme.palette.custom.dark,
                             },
                             transform: "rotate(180deg)",
                             writingMode: {

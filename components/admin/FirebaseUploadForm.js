@@ -8,7 +8,7 @@ import { useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
 import { galleryCategories } from "../../siteInfo";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
 
@@ -126,7 +126,6 @@ const FirebaseUploadForm = ({
                 const storageRef = ref(storage, `${folder}/${image.name}`);
 
                 const uploadTask = uploadBytesResumable(storageRef, image);
-                console.log(image);
 
                 uploadTask.on(
                     "state_changed",
@@ -188,7 +187,7 @@ const FirebaseUploadForm = ({
                 display: "flex",
                 flexDirection: "column",
                 gap: "1rem",
-                backgroundColor: lightTheme.palette.primary.main,
+                backgroundColor: theme.palette.primary.main,
                 padding: "1em",
                 borderRadius: "5px",
             }}

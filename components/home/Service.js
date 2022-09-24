@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import SizedImage from "../general/SizedImage";
 
 const Service = ({ service, preview }) => {
@@ -35,7 +35,7 @@ const Service = ({ service, preview }) => {
                         sx={{
                             textAlign: "center",
                             fontWeight: "400",
-                            color: lightTheme.palette.custom.dark,
+                            color: theme.palette.custom.dark,
                         }}
                         variant="h3"
                     >
@@ -46,8 +46,8 @@ const Service = ({ service, preview }) => {
                         variant="h4"
                         sx={{
                             textAlign: "center",
-                            // color: lightTheme.palette.custom.accent,
-                            color: lightTheme.palette.primary.main,
+                            // color: theme.palette.custom.accent,
+                            color: theme.palette.primary.main,
                         }}
                     >
                         {service.price}
@@ -56,7 +56,7 @@ const Service = ({ service, preview }) => {
                     <Typography
                         sx={{
                             textAlign: "center",
-                            color: lightTheme.palette.custom.darkMuted,
+                            color: theme.palette.custom.darkMuted,
                         }}
                     >
                         {service.description}

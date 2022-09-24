@@ -2,7 +2,7 @@ import { Button, Divider, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import NativeImage from "../general/NativeImage";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 import { ArrowRightAlt } from "@mui/icons-material";
 import GalleryImage from "../general/NativeImage";
 import Image from "next/image";
@@ -46,7 +46,7 @@ const EventItem = ({ fields, image }) => {
                             <br />
                             <Typography
                                 sx={{
-                                    color: lightTheme.palette.custom.lightMuted,
+                                    color: theme.palette.custom.lightMuted,
                                 }}
                             >
                                 {description}

@@ -10,11 +10,11 @@
 // 9. The Process
 // 10. Contact
 
-import lightTheme from "./styles/themes/lightTheme";
+import lightTheme from "./styles/themes/theme";
 
 // 1. Meta
 
-const siteName = "ARTIST PORTFOLIO";
+const siteName = "PORTFOLIO";
 // const siteName = "Cosima Hewes";
 
 // 2. Layout
@@ -38,13 +38,17 @@ const header = {
 
 const heroContent = {
     image: { url: "/images/hero.webp", alt: "alt hero text" },
-    primaryText: "ARTIST PORTFOLIO TEMPLATE",
-    secondaryText: "Created by FictionalWeb.com",
-    buttonOne: {
-        variant: "contained",
-        href: "/projects",
-        text: "View Galleries",
-    },
+    title: "YOUR NAME",
+    highlights: [
+        "This is the first highlight.",
+        "This is the second highlight",
+        "This is the third highlight",
+        "This is the fourth highlight",
+    ],
+    buttons: [
+        { variant: "contained", href: "/cv", text: "View cv" },
+        { variant: "contained", href: "/work", text: "View publications" },
+    ],
 };
 
 const homeGalleryContent = {

@@ -2,7 +2,7 @@ import { Button, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Link from "next/link";
 import { pages, header, siteName } from "../../siteInfo";
-import lightTheme from "../../styles/themes/lightTheme";
+import theme from "../../styles/themes/theme";
 
 const Header = ({ light }) => {
     return (
@@ -26,8 +26,8 @@ const Header = ({ light }) => {
                         component="p"
                         sx={{
                             color: light
-                                ? lightTheme.palette.custom.light
-                                : lightTheme.palette.custom.dark,
+                                ? theme.palette.custom.light
+                                : theme.palette.custom.dark,
                         }}
                     >
                         <Link href="/">{siteName}</Link>
@@ -42,16 +42,12 @@ const Header = ({ light }) => {
                                     className="nav-link"
                                     sx={{
                                         color: light
-                                            ? lightTheme.palette.custom
-                                                  .lightMuted
-                                            : lightTheme.palette.custom
-                                                  .darkMuted,
+                                            ? theme.palette.custom.lightMuted
+                                            : theme.palette.custom.darkMuted,
                                         "&:hover": {
                                             color: light
-                                                ? lightTheme.palette.custom
-                                                      .light
-                                                : lightTheme.palette.custom
-                                                      .dark,
+                                                ? theme.palette.custom.light
+                                                : theme.palette.custom.dark,
                                         },
                                     }}
                                 >
