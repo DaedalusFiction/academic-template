@@ -13,8 +13,8 @@ let theme = createTheme({
         mode: "light",
         background: {
             default: "#fefefe",
-            accentPrimary: "#ffeccd",
-            accentDark: "#ffeccd",
+            accent: "#ffeccd",
+            dark: "#ffeccd",
         },
         custom: {
             dark: "#272D2D",

@@ -16,6 +16,7 @@ import {
     mosaicSectionContentTwo,
     mosaicSectionContentThree,
     blockPhotoContentTwo,
+    showcaseContentOne,
 } from "../siteInfo";
 import HomeGallery from "../components/home/HomeGallery";
 import { Box } from "@mui/material";
@@ -26,7 +27,7 @@ export default function Home() {
         <Box sx={{ position: "relative" }}>
             <Meta siteName={siteName} />
             <Hero siteName={siteName} />
-            <Showcase />
+            <Showcase showcaseContent={showcaseContentOne} />
             {/* <BlockText text={blockTextOne} />
             <BlockPhoto blockPhotoContent={blockPhotoContentOne} reverse />
       <MosaicSection

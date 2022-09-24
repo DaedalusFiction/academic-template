@@ -251,6 +251,18 @@ const blockPhotoContentTwo = {
     image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
 };
 
+const showcaseContentOne = {
+    title: "Cool Book Title",
+    subTitle: "Coming Soon",
+    image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    description:
+        "This is the showcase description. This is where you can talk about what you're showcasing and tell people why they should be interested.",
+    buttons: [
+        { variant: "contained", href: "https://google.com", text: "Preorder" },
+        { variant: "contained", href: "/work", text: "View publications" },
+    ],
+};
+
 // 4. Services
 // 5. Projects
 
@@ -552,6 +564,7 @@ export {
     blockTextThree,
     blockPhotoContentOne,
     blockPhotoContentTwo,
+    showcaseContentOne,
     mosaicSectionContentOne,
     mosaicSectionContentTwo,
     mosaicSectionContentThree,

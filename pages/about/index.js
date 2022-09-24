@@ -3,7 +3,6 @@ import { Container } from "@mui/system";
 import SizedImage from "../../components/general/SizedImage";
 import { leadProfile, pages, secondaryProfiles } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout";
-import lightTheme from "../../styles/themes/lightTheme";
 import AboutNavbar from "../../components/about/AboutNavbar";
 
 const index = () => {
