@@ -9,13 +9,14 @@ const Hero = () => {
     return (
         <Box sx={{ paddingTop: "6rem" }}>
             <Container maxWidth="xl">
-                <Grid container spacing={4} wrap="wrap-reverse">
+                <Grid container spacing={4}>
                     <Grid item xs={12} md={6}>
                         <Box
                             sx={{
                                 display: "flex",
                                 justifyContent: "center",
                                 height: "100%",
+                                padding: "6rem 0",
                             }}
                         >
                             <Box
@@ -70,7 +71,11 @@ const Hero = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Box sx={{ transform: "translateY(2px)" }}>
+                        <Box
+                            sx={{
+                                display: { xs: "none", md: "flex" },
+                            }}
+                        >
                             <NativeImage
                                 maxSize={2000}
                                 image={heroContent.image}

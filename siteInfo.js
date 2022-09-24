@@ -528,23 +528,22 @@ const eventConfig = {
 };
 
 const pages = [
-    { name: "GALLERY", href: "/gallery", subPages: galleryCategories },
-    { name: "PROCESS", href: "/process", subPages: [] },
-    { name: "SERVICES", href: "/services", subPages: [] },
-    {
-        name: "ABOUT",
-        href: "/about",
-        subPages: [
-            { name: "The Artist", href: "/about/artist" },
-            { name: "The Studio", href: "/about/studio" },
-            { name: "The Work", href: "/about/work" },
-        ],
-    },
+    { name: "CURRICULUM VITAE", href: "/process", subPages: [] },
     {
         name: "EVENTS",
         href: "/events",
         subPages: [],
     },
+    {
+        name: "ABOUT",
+        href: "/about",
+        subPages: [
+            { name: "Teaching", href: "/about/artist" },
+            { name: "Research", href: "/about/studio" },
+            { name: "Accomplishments", href: "/about/work" },
+        ],
+    },
+    { name: "VIDEOS", href: "/services", subPages: [] },
     { name: "ADMIN", href: "/admin", subPages: [] },
 ];
 

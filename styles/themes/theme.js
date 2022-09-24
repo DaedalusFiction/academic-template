@@ -111,6 +111,8 @@ theme = createTheme(theme, {
             styleOverrides: {
                 root: {
                     borderRadius: "0",
+                    whiteSpace: "nowrap",
+                    minWidth: "max-content",
                 },
             },
         },
