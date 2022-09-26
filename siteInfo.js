@@ -552,7 +552,16 @@ const pages = [
             { name: "Accomplishments", href: "/about/work" },
         ],
     },
-    { name: "videos", href: "/services", subPages: [] },
+    { name: "videos", href: "/videos", subPages: [] },
+];
+
+const videos = [
+    {
+        title: "Video One",
+        description: "Video Description",
+        date: "January 1, 1969",
+        href: "https://www.youtube.com/embed/CzNjdaXleEM",
+    },
 ];
 
 export {
@@ -560,6 +569,7 @@ export {
     pages,
     navbar,
     header,
+    videos,
     galleryCategories,
     galleryStylesCategories,
     galleryConfig,
