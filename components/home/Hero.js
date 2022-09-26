@@ -7,9 +7,9 @@ import NativeImage from "../general/NativeImage.js";
 
 const Hero = () => {
     return (
-        <Box sx={{ paddingTop: "6rem" }}>
+        <Box sx={{ padding: "8rem 0" }}>
             <Container maxWidth="xl">
-                <Grid container spacing={4}>
+                <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
                         <Box
                             sx={{

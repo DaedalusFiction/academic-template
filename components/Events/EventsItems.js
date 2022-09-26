@@ -18,24 +18,17 @@ const EventsItems = () => {
             >
                 Upcoming:
             </Typography>
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "2rem",
-                }}
-            >
-                {events &&
-                    events.map((event, index) => {
-                        return (
-                            <EventItem
-                                key={index}
-                                fields={event.data().fields}
-                                image={event.data().URLs[0]}
-                            />
-                        );
-                    })}
-            </Box>
+
+            {events &&
+                events.map((event, index) => {
+                    return (
+                        <EventItem
+                            key={index}
+                            fields={event.data().fields}
+                            image={event.data().URLs[0]}
+                        />
+                    );
+                })}
         </Container>
     );
 };

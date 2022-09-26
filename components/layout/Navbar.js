@@ -7,14 +7,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import {
-    Button,
-    Divider,
-    Fade,
-    Grid,
-    Slide,
-    useScrollTrigger,
-} from "@mui/material";
+import { Button, Divider, Fade, Grid, Slide } from "@mui/material";
 import Link from "next/link";
 import theme from "../../styles/themes/theme";
 import { useEffect, useState } from "react";
@@ -197,7 +190,7 @@ const Navbar = () => {
                                             margin: "0 1em",
                                             transition: "150ms",
                                             color:
-                                                "/" + currentPage === "/"
+                                                currentPage === ""
                                                     ? theme.palette.custom.light
                                                     : theme.palette.custom.dark,
                                             "&:hover": {
@@ -221,49 +214,41 @@ const Navbar = () => {
                                         gap: "1em",
                                     }}
                                 >
-                                    <Grid container>
-                                        {pages.map((page, index) => (
-                                            <Grid item xs key={index}>
-                                                <Box
+                                    {pages.map((page, index) => (
+                                        <Box
+                                            key={index}
+                                            sx={{
+                                                display: "flex",
+                                                justifyContent: "center",
+                                            }}
+                                        >
+                                            <Link href={page.href}>
+                                                <Button
+                                                    onMouseEnter={
+                                                        handleMouseEnter
+                                                    }
+                                                    size="large"
                                                     sx={{
-                                                        display: "flex",
-                                                        justifyContent:
-                                                            "center",
+                                                        color:
+                                                            currentPage ===
+                                                            page.name
+                                                                ? theme.palette
+                                                                      .custom
+                                                                      .light
+                                                                : theme.palette
+                                                                      .custom
+                                                                      .dark,
+                                                        "&:hover": {
+                                                            color: theme.palette
+                                                                .custom.light,
+                                                        },
                                                     }}
                                                 >
-                                                    <Link href={page.href}>
-                                                        <Button
-                                                            onMouseEnter={
-                                                                handleMouseEnter
-                                                            }
-                                                            size="large"
-                                                            sx={{
-                                                                color:
-                                                                    currentPage ===
-                                                                    page.href
-                                                                        ? theme
-                                                                              .palette
-                                                                              .custom
-                                                                              .light
-                                                                        : theme
-                                                                              .palette
-                                                                              .custom
-                                                                              .dark,
-                                                                "&:hover": {
-                                                                    color: theme
-                                                                        .palette
-                                                                        .custom
-                                                                        .light,
-                                                                },
-                                                            }}
-                                                        >
-                                                            {page.name}
-                                                        </Button>
-                                                    </Link>
-                                                </Box>
-                                            </Grid>
-                                        ))}
-                                    </Grid>
+                                                    {page.name}
+                                                </Button>
+                                            </Link>
+                                        </Box>
+                                    ))}
                                 </Box>
                             </Grid>
                             <Grid item xs>
@@ -277,10 +262,7 @@ const Navbar = () => {
                                         height: "100%",
                                     }}
                                 >
-                                    <SocialMediaIcons
-                                        color="secondary"
-                                        fontSize="20px"
-                                    />
+                                    <SocialMediaIcons fontSize="20px" />
                                     <Link href={navbar.buttonOne.href}>
                                         <Button
                                             color="secondary"
@@ -299,81 +281,68 @@ const Navbar = () => {
                                     <Grid container>
                                         <Grid item xs></Grid>
                                         <Grid item xs={6}>
-                                            <Box>
-                                                <Grid container>
-                                                    {pages.map(
-                                                        (page, index) => {
-                                                            return (
-                                                                <Grid
-                                                                    item
-                                                                    xs
-                                                                    key={index}
-                                                                >
-                                                                    <Box
-                                                                        sx={{
-                                                                            display:
-                                                                                "flex",
-                                                                            justifyContent:
-                                                                                "center",
-                                                                            width: "100%",
-                                                                        }}
-                                                                    >
-                                                                        <Box>
-                                                                            {page
-                                                                                .subPages
-                                                                                .length >
-                                                                                0 &&
-                                                                                page.subPages.map(
-                                                                                    (
-                                                                                        subPage,
-                                                                                        index
-                                                                                    ) => {
-                                                                                        return (
-                                                                                            <Typography
-                                                                                                key={
-                                                                                                    index
-                                                                                                }
-                                                                                                sx={{
-                                                                                                    textTransform:
-                                                                                                        "capitalize",
-                                                                                                    margin: ".5em 0",
-                                                                                                    transition:
-                                                                                                        "150ms",
-                                                                                                    color: theme
-                                                                                                        .palette
-                                                                                                        .custom
-                                                                                                        .dark,
-                                                                                                    "&:hover":
-                                                                                                        {
-                                                                                                            color: theme
-                                                                                                                .palette
-                                                                                                                .custom
-                                                                                                                .light,
-                                                                                                        },
-                                                                                                }}
-                                                                                            >
-                                                                                                <Link
-                                                                                                    href={
-                                                                                                        subPage.href
-                                                                                                    }
-                                                                                                >
-                                                                                                    {
-                                                                                                        subPage.name
-                                                                                                    }
-                                                                                                </Link>
-                                                                                            </Typography>
-                                                                                        );
+                                            <Box
+                                                sx={{
+                                                    display: "flex",
+                                                    justifyContent:
+                                                        "space-between",
+                                                    gap: "1em",
+                                                    width: "100%",
+                                                }}
+                                            >
+                                                {pages.map((page, index) => {
+                                                    return (
+                                                        <Box key={index}>
+                                                            {page.subPages
+                                                                .length > 0 &&
+                                                                page.subPages.map(
+                                                                    (
+                                                                        subPage,
+                                                                        index
+                                                                    ) => {
+                                                                        return (
+                                                                            <Typography
+                                                                                key={
+                                                                                    index
+                                                                                }
+                                                                                sx={{
+                                                                                    textTransform:
+                                                                                        "capitalize",
+                                                                                    margin: ".5em 0",
+                                                                                    transition:
+                                                                                        "150ms",
+                                                                                    color: theme
+                                                                                        .palette
+                                                                                        .custom
+                                                                                        .dark,
+                                                                                    "&:hover":
+                                                                                        {
+                                                                                            color: theme
+                                                                                                .palette
+                                                                                                .custom
+                                                                                                .light,
+                                                                                        },
+                                                                                }}
+                                                                            >
+                                                                                <Link
+                                                                                    href={
+                                                                                        subPage.href
                                                                                     }
-                                                                                )}
-                                                                        </Box>
-                                                                    </Box>
-                                                                </Grid>
-                                                            );
-                                                        }
-                                                    )}
-                                                </Grid>
+                                                                                >
+                                                                                    {
+                                                                                        subPage.name
+                                                                                    }
+                                                                                </Link>
+                                                                            </Typography>
+                                                                        );
+                                                                    }
+                                                                )}
+                                                        </Box>
+                                                    );
+                                                })}
                                             </Box>
                                         </Grid>
+
                                         <Grid item xs></Grid>
                                     </Grid>
                                 </Fade>

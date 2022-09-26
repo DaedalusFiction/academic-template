@@ -3,12 +3,17 @@ import { createTheme } from "@mui/material/styles";
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#FFBA49",
+            main: "#DC965A",
+            // main: "#cbbbbe",
+            // main: "#FFBA49",
             // main: "#fefefe",
-            off: "#f7d195",
+            off: "#FBFFF1",
         },
         secondary: {
-            main: "#1B998B",
+            // main: "#1B998B",
+            // main: "#4b36e9",
+            main: "#3B3B58",
+            // main: "#6c5ddd",
         },
         mode: "light",
         background: {
@@ -128,6 +133,14 @@ theme = createTheme(theme, {
                 root: {
                     // fontFamily: theme.typography.theme.accent,
                     fontSize: "1rem",
+                },
+            },
+        },
+        MuiIconButton: {
+            styleOverrides: {
+                root: {
+                    // fontFamily: theme.typography.theme.accent,
+                    color: "#3B3B58",
                 },
             },
         },

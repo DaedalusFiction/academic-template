@@ -21,6 +21,7 @@ import {
 import HomeGallery from "../components/home/HomeGallery";
 import { Box } from "@mui/material";
 import Showcase from "../components/home/Showcase";
+import EventsPreview from "../components/home/EventsPreview";
 
 export default function Home() {
     return (
@@ -28,8 +29,10 @@ export default function Home() {
             <Meta siteName={siteName} />
             <Hero siteName={siteName} />
             <Showcase showcaseContent={showcaseContentOne} />
-            {/* <BlockText text={blockTextOne} />
             <BlockPhoto blockPhotoContent={blockPhotoContentOne} reverse />
+            <EventsPreview />
+            <BlockText text={blockTextOne} />
+            {/* 
       <MosaicSection
         mosaicSectionContent={mosaicSectionContentOne}
         variation={1}

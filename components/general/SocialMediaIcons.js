@@ -3,26 +3,27 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Link from "next/link";
-const SocialMediaIcons = ({ color, fontSize }) => {
+import theme from "../../styles/themes/theme";
+const SocialMediaIcons = ({ fontSize }) => {
     return (
         <Stack direction="row" spacing={1}>
             <Tooltip title="twitter">
                 <Link href="https://instagram.com">
-                    <IconButton aria-label="delete" color={color}>
+                    <IconButton>
                         <InstagramIcon sx={{ fontSize: fontSize }} />
                     </IconButton>
                 </Link>
             </Tooltip>
             <Tooltip title="twitter">
                 <Link href="https://instagram.com">
-                    <IconButton aria-label="delete" color={color}>
+                    <IconButton>
                         <FacebookIcon sx={{ fontSize: fontSize }} />
                     </IconButton>
                 </Link>
             </Tooltip>
             <Tooltip title="twitter">
                 <Link href="https://instagram.com">
-                    <IconButton color={color} aria-label="add an alarm">
+                    <IconButton>
                         <TwitterIcon sx={{ fontSize: fontSize }} />
                     </IconButton>
                 </Link>

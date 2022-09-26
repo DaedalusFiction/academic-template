@@ -6,7 +6,7 @@ import NativeImage from "../general/NativeImage";
 
 const Showcase = ({ showcaseContent }) => {
     return (
-        <Box sx={{ background: theme.palette.primary.main }}>
+        <Box sx={{ background: theme.palette.background.accent }}>
             <Container maxWidth="xl">
                 <Grid container>
                     <Grid item xs={12} md={6}>
@@ -37,6 +37,17 @@ const Showcase = ({ showcaseContent }) => {
                             <Typography sx={{ maxWidth: "45ch" }}>
                                 {showcaseContent.description}
                             </Typography>
+                            <Box
+                                sx={{
+                                    borderLeft: "1px solid black",
+                                    marginTop: ".5em",
+                                    padding: ".5em 1em",
+                                    maxWidth: "45ch",
+                                    fontStyle: "italic",
+                                }}
+                            >
+                                <Typography>{showcaseContent.quote}</Typography>
+                            </Box>
                             <Box
                                 sx={{
                                     display: "flex",

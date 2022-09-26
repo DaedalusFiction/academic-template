@@ -1,4 +1,4 @@
-import { Button, Divider, Grid, Typography } from "@mui/material";
+import { Button, Container, Divider, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import NativeImage from "../general/NativeImage";
@@ -9,7 +9,7 @@ import Image from "next/image";
 import EventImage from "./EventImage";
 import { formatDate } from "../../utility/general.js";
 
-const EventItem = ({ fields, image }) => {
+const EventItem = ({ fields, image, preview }) => {
     const title = fields[0].value;
     const start = fields[1].value;
     const end = fields[2].value;
@@ -19,55 +19,67 @@ const EventItem = ({ fields, image }) => {
     const website = fields[6].value;
 
     return (
-        <Box>
-            <Grid container spacing={8}>
-                <Grid item xs={12} sm={5}>
-                    <Box>{image && <EventImage image={image} />}</Box>
-                </Grid>
-                <Grid item xs={12} sm={7}>
-                    <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "space-between",
-                            height: "100%",
-                        }}
-                    >
-                        <Box>
-                            <Typography variant="h2">{title}</Typography>
-                            <Typography variant="h4">{`${start} ${
-                                end && "through"
-                            } ${end}`}</Typography>
-                            {
-                                <Typography variant="h5">{`${venue}${
-                                    time && ","
-                                } ${time}`}</Typography>
-                            }
-                            <br />
-                            <Typography
-                                sx={{
-                                    color: theme.palette.custom.lightMuted,
-                                }}
-                            >
-                                {description}
-                            </Typography>
-                            <br />
+        <Container className="section" maxWidth="lg">
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "2rem",
+                }}
+            >
+                <Grid container spacing={8}>
+                    <Grid item xs={12} sm={5}>
+                        <Box>{image && <EventImage image={image} />}</Box>
+                    </Grid>
+                    <Grid item xs={12} sm={7}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                justifyContent: "space-between",
+                                height: "100%",
+                            }}
+                        >
+                            <Box>
+                                <Typography variant="h5">
+                                    Upcoming Event:
+                                </Typography>
+                                <Typography variant="h2">{title}</Typography>
+                                <Typography variant="h4">{`${start} ${
+                                    end && "through"
+                                } ${end}`}</Typography>
+                                {
+                                    <Typography variant="h5">{`${venue}${
+                                        time && ","
+                                    } ${time}`}</Typography>
+                                }
+                                <br />
+                                <Typography
+                                    sx={{
+                                        color: theme.palette.custom.darkM,
+                                    }}
+                                >
+                                    {description}
+                                </Typography>
+                                <br />
+                            </Box>
+                            <Box>
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
+                                    href={website}
+                                    size="large"
+                                    endIcon={<ArrowRightAlt />}
+                                >
+                                    more details
+                                </Button>
+                            </Box>
                         </Box>
-                        <Box>
-                            <Button
-                                variant="contained"
-                                href={website}
-                                size="large"
-                                endIcon={<ArrowRightAlt />}
-                            >
-                                more details
-                            </Button>
-                        </Box>
-                    </Box>
+                    </Grid>
                 </Grid>
-            </Grid>
-            <Divider sx={{ margin: "3rem 0" }} />
-        </Box>
+                {!preview && <Divider sx={{ margin: "3rem 0" }} />}
+            </Box>
+        </Container>
     );
 };
 

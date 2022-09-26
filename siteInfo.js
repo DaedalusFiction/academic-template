@@ -255,6 +255,7 @@ const showcaseContentOne = {
     title: "Cool Book Title",
     subTitle: "Coming Soon",
     image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    quote: "Uncle Michael is so cool, he won a game of connect four in three moves",
     description:
         "This is the showcase description. This is where you can talk about what you're showcasing and tell people why they should be interested.",
     buttons: [
@@ -528,14 +529,22 @@ const eventConfig = {
 };
 
 const pages = [
-    { name: "CURRICULUM VITAE", href: "/process", subPages: [] },
+    { name: "curriculum vitae", href: "/process", subPages: [] },
     {
-        name: "EVENTS",
+        name: "publications",
+        href: "/publications",
+        subPages: [
+            { name: "Books", href: "/publications/books" },
+            { name: "Articles", href: "/publications/articles" },
+        ],
+    },
+    {
+        name: "events",
         href: "/events",
         subPages: [],
     },
     {
-        name: "ABOUT",
+        name: "about",
         href: "/about",
         subPages: [
             { name: "Teaching", href: "/about/artist" },
@@ -543,8 +552,7 @@ const pages = [
             { name: "Accomplishments", href: "/about/work" },
         ],
     },
-    { name: "VIDEOS", href: "/services", subPages: [] },
-    { name: "ADMIN", href: "/admin", subPages: [] },
+    { name: "videos", href: "/services", subPages: [] },
 ];
 
 export {
