@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Link from "next/link";
 import React from "react";
@@ -21,47 +21,14 @@ const Footer = () => {
             <Grid container sx={{ padding: "1rem 0" }}>
                 <Grid item xs={6}>
                     <SocialMediaIcons color="secondary" fontSize="25px" />
-                    {/* <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "1em",
-                        }}
-                    >
-                        {socialMedia.map((item) => {
-                            return (
-                                <Link key={item.media} href={item.url}>
-                                    <Typography
-                                        sx={{
-                                            cursor: "pointer",
-                                            "&:hover": {
-                                                textDecoration: "underline",
-                                            },
-                                        }}
-                                    >
-                                        {item.media}
-                                    </Typography>
-                                </Link>
-                            );
-                        })}
-                    </Box> */}
                 </Grid>
                 <Grid item xs={6}>
-                    <Box
-                        sx={{
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: "1em",
-                            alignItems: "end",
-                        }}
-                    >
-                        {contactInfo.map((item) => {
-                            return (
-                                <Typography key={item.type} align="right">
-                                    {item.value}
-                                </Typography>
-                            );
-                        })}
+                    <Box sx={{ display: "flex", justifyContent: "end" }}>
+                        <Link href="/contact">
+                            <Button color="secondary" variant="outlined">
+                                contact
+                            </Button>
+                        </Link>
                     </Box>
                 </Grid>
             </Grid>
