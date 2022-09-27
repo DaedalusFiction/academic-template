@@ -19,7 +19,7 @@ const EventItem = ({ fields, image, isPreview }) => {
     const website = fields[6].value;
 
     return (
-        <Container className="section" maxWidth="lg">
+        <Container maxWidth="lg">
             <Box
                 sx={{
                     display: "flex",
