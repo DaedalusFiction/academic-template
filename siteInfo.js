@@ -46,8 +46,12 @@ const heroContent = {
         "This is the fourth highlight",
     ],
     buttons: [
-        { variant: "contained", href: "/cv", text: "View cv" },
-        { variant: "contained", href: "/work", text: "View publications" },
+        { variant: "contained", href: "/curriculumvitae", text: "View cv" },
+        {
+            variant: "contained",
+            href: "/publications",
+            text: "View publications",
+        },
     ],
 };
 
