@@ -24,6 +24,7 @@ const Showcase = ({ showcaseContent }) => {
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "center",
+                                alignItems: { xs: "center", md: "start" },
                                 gap: ".5em",
                                 padding: "2rem 0",
                             }}

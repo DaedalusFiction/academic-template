@@ -7,10 +7,13 @@ import EventItem from "../Events/EventItem";
 const EventsPreview = () => {
     const [events] = useGetEvents("events");
     return (
-        <Box sx={{ background: theme.palette.background.accent }}>
+        <Box
+            className="section"
+            sx={{ background: theme.palette.background.accent }}
+        >
             {events && (
                 <EventItem
-                    preview
+                    isPreview
                     fields={events[0].data().fields}
                     image={events[0].data().URLs[0]}
                 />

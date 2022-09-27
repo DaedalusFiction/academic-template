@@ -7,7 +7,7 @@ import NativeImage from "../general/NativeImage.js";
 
 const Hero = () => {
     return (
-        <Box sx={{ padding: "8rem 0" }}>
+        <Box className="section" sx={{ marginTop: { xs: "none", md: "4rem" } }}>
             <Container maxWidth="xl">
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={6}>
@@ -58,7 +58,6 @@ const Hero = () => {
                                                     <Button
                                                         variant={button.variant}
                                                         size="large"
-                                                        color="secondary"
                                                     >
                                                         {button.text}
                                                     </Button>
@@ -71,11 +70,7 @@ const Hero = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Box
-                            sx={{
-                                display: { xs: "none", md: "flex" },
-                            }}
-                        >
+                        <Box>
                             <NativeImage
                                 maxSize={2000}
                                 image={heroContent.image}

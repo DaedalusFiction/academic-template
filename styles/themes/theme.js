@@ -2,8 +2,9 @@ import { createTheme } from "@mui/material/styles";
 
 let theme = createTheme({
     palette: {
+        mode: "light",
         primary: {
-            main: "#DC965A",
+            main: "#3B3B58",
             // main: "#cbbbbe",
             // main: "#FFBA49",
             // main: "#fefefe",
@@ -12,10 +13,10 @@ let theme = createTheme({
         secondary: {
             // main: "#1B998B",
             // main: "#4b36e9",
-            main: "#3B3B58",
+            main: "#DC965A",
+            // main: "#3B3B58",
             // main: "#6c5ddd",
         },
-        mode: "light",
         background: {
             default: "#fefefe",
             accent: "#ffeccd",
@@ -140,7 +141,7 @@ theme = createTheme(theme, {
             styleOverrides: {
                 root: {
                     // fontFamily: theme.typography.theme.accent,
-                    color: "#3B3B58",
+                    color: theme.palette.secondary.main,
                 },
             },
         },

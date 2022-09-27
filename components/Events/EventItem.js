@@ -9,7 +9,7 @@ import Image from "next/image";
 import EventImage from "./EventImage";
 import { formatDate } from "../../utility/general.js";
 
-const EventItem = ({ fields, image, preview }) => {
+const EventItem = ({ fields, image, isPreview }) => {
     const title = fields[0].value;
     const start = fields[1].value;
     const end = fields[2].value;
@@ -63,7 +63,7 @@ const EventItem = ({ fields, image, preview }) => {
                                 </Typography>
                                 <br />
                             </Box>
-                            <Box>
+                            <Box sx={{ display: "flex", gap: "1em" }}>
                                 <Button
                                     variant="contained"
                                     color="secondary"
@@ -73,11 +73,22 @@ const EventItem = ({ fields, image, preview }) => {
                                 >
                                     more details
                                 </Button>
+                                {isPreview && (
+                                    <Button
+                                        variant="contained"
+                                        color="secondary"
+                                        href="/events"
+                                        size="large"
+                                        endIcon={<ArrowRightAlt />}
+                                    >
+                                        all events
+                                    </Button>
+                                )}
                             </Box>
                         </Box>
                     </Grid>
                 </Grid>
-                {!preview && <Divider sx={{ margin: "3rem 0" }} />}
+                {!isPreview && <Divider sx={{ margin: "3rem 0" }} />}
             </Box>
         </Container>
     );

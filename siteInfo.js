@@ -237,7 +237,10 @@ const blockPhotoContentOne = {
         href: "/about",
         variant: "contained",
     },
-    image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    image: {
+        url: "/images/novelists.webp",
+        alt: "Michael hoberman speaking with two novelists",
+    },
 };
 const blockPhotoContentTwo = {
     background: lightTheme.palette.background.accentLight,
@@ -566,7 +569,7 @@ const videos = [
 
 const books = [
     {
-        title: "book one",
+        title: "Book One",
         publisher: "Name of publisher",
         date: "2003",
         description:
@@ -575,13 +578,13 @@ const books = [
             href: "https://google.com",
             variant: "contained",
             color: "secondary",
-            text: "view",
+            text: "view listing",
         },
 
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        image: { url: "/images/hundred.webp", alt: "alt placeholder text" },
     },
     {
-        title: "book one",
+        title: "Book Two",
         publisher: "Name of publisher",
         date: "2003",
         description:
@@ -590,11 +593,39 @@ const books = [
             href: "https://google.com",
             variant: "contained",
             color: "secondary",
-            text: "view",
+            text: "view listing",
         },
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        image: { url: "/images/israel.webp", alt: "alt placeholder text" },
+    },
+    {
+        title: "Book Three",
+        publisher: "Name of publisher",
+        date: "2003",
+        description:
+            "This is the description of the book. It contains many interesting facts and entertaining anecdotes. The book I mean, not this description.",
+        button: {
+            href: "https://google.com",
+            variant: "contained",
+            color: "secondary",
+            text: "view listing",
+        },
+        image: { url: "/images/strange.webp", alt: "alt placeholder text" },
     },
 ];
+
+const articles = [
+    { title: "Article one", href: "https://google.com", date: "Jan 1, 2022" },
+    { title: "Article two", href: "https://google.com", date: "Jan 1, 2022" },
+    { title: "Article three", href: "https://google.com", date: "Jan 1, 2022" },
+    { title: "Article four", href: "https://google.com", date: "Jan 1, 2022" },
+    { title: "Article five", href: "https://google.com", date: "Jan 1, 2022" },
+];
+
+const publicationsContent = {
+    title: "Books and Articles by Your Name",
+    body: "This is the body of the page. It can be as long or as short as you like",
+    image: { url: "/images/strange.webp", alt: "alt placeholder text" },
+};
 
 export {
     siteName,
@@ -603,6 +634,7 @@ export {
     header,
     videos,
     books,
+    articles,
     galleryCategories,
     galleryStylesCategories,
     galleryConfig,
@@ -624,4 +656,5 @@ export {
     studioContent,
     workContent,
     processSteps,
+    publicationsContent,
 };

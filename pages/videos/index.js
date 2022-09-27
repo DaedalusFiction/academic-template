@@ -1,17 +1,12 @@
 import { Divider, Grid, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import React from "react";
+import PageLayout from "../../components/layout/PageLayout";
 import { videos } from "../../siteInfo";
 const index = () => {
     return (
-        <Box className="section">
+        <PageLayout name="Videos">
             <Container maxWidth="lg">
-                <Typography
-                    variant="h1"
-                    sx={{ margin: "1em 0", textAlign: "center" }}
-                >
-                    Videos
-                </Typography>
                 {videos.map((video, index) => {
                     return (
                         <Box key={index}>
@@ -58,7 +53,7 @@ const index = () => {
                     );
                 })}
             </Container>
-        </Box>
+        </PageLayout>
     );
 };
 

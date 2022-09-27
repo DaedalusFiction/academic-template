@@ -143,7 +143,9 @@ const Navbar = () => {
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
+                                    justifyContent: "center",
                                     height: "100%",
+                                    width: "100%",
                                 }}
                             >
                                 <Typography
@@ -153,12 +155,12 @@ const Navbar = () => {
                                         navigateToTop();
                                     }}
                                     sx={{
-                                        mr: 2,
                                         display: { xs: "flex", lg: "none" },
                                         fontSize: "1.75rem",
-                                        flexGrow: 1,
+                                        textAlign: "center",
+                                        width: "100%",
                                         fontWeight: 700,
-                                        color: theme.palette.custom.dark,
+                                        color: theme.palette.custom.light,
                                     }}
                                 >
                                     <Link href="/" style={{ color: "inherit" }}>
@@ -192,7 +194,8 @@ const Navbar = () => {
                                             color:
                                                 currentPage === ""
                                                     ? theme.palette.custom.light
-                                                    : theme.palette.custom.dark,
+                                                    : theme.palette.custom
+                                                          .lightMuted,
                                             "&:hover": {
                                                 color: theme.palette.custom
                                                     .light,
@@ -239,7 +242,7 @@ const Navbar = () => {
                                                                       .light
                                                                 : theme.palette
                                                                       .custom
-                                                                      .dark,
+                                                                      .lightMuted,
                                                         "&:hover": {
                                                             color: theme.palette
                                                                 .custom.light,
@@ -316,7 +319,7 @@ const Navbar = () => {
                                                                                     color: theme
                                                                                         .palette
                                                                                         .custom
-                                                                                        .dark,
+                                                                                        .lightMuted,
                                                                                     "&:hover":
                                                                                         {
                                                                                             color: theme
