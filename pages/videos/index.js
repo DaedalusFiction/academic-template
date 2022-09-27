@@ -6,13 +6,16 @@ const index = () => {
     return (
         <Box className="section">
             <Container maxWidth="lg">
-                <Typography variant="h1" sx={{ margin: "1em 0" }}>
+                <Typography
+                    variant="h1"
+                    sx={{ margin: "1em 0", textAlign: "center" }}
+                >
                     Videos
                 </Typography>
                 {videos.map((video, index) => {
                     return (
                         <Box key={index}>
-                            <Grid container spacing={2}>
+                            <Grid className="section" container spacing={2}>
                                 <Grid item xs={12} md={5}>
                                     <Box
                                         sx={{
@@ -48,7 +51,9 @@ const index = () => {
                                     </Box>
                                 </Grid>
                             </Grid>
-                            <Divider sx={{ margin: "2em 0" }} />
+                            <Divider
+                                sx={{ maxWidth: "30rem", margin: "0 auto" }}
+                            />
                         </Box>
                     );
                 })}

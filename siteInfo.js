@@ -529,7 +529,7 @@ const eventConfig = {
 };
 
 const pages = [
-    { name: "curriculum vitae", href: "/process", subPages: [] },
+    { name: "curriculum vitae", href: "/curriculumvitae", subPages: [] },
     {
         name: "publications",
         href: "/publications",
@@ -564,12 +564,45 @@ const videos = [
     },
 ];
 
+const books = [
+    {
+        title: "book one",
+        publisher: "Name of publisher",
+        date: "2003",
+        description:
+            "This is the description of the book. It contains many interesting facts and entertaining anecdotes. The book I mean, not this description.",
+        button: {
+            href: "https://google.com",
+            variant: "contained",
+            color: "secondary",
+            text: "view",
+        },
+
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    },
+    {
+        title: "book one",
+        publisher: "Name of publisher",
+        date: "2003",
+        description:
+            "This is the description of the book. It contains many interesting facts and entertaining anecdotes. The book I mean, not this description.",
+        button: {
+            href: "https://google.com",
+            variant: "contained",
+            color: "secondary",
+            text: "view",
+        },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    },
+];
+
 export {
     siteName,
     pages,
     navbar,
     header,
     videos,
+    books,
     galleryCategories,
     galleryStylesCategories,
     galleryConfig,

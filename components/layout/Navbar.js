@@ -232,6 +232,8 @@ const Navbar = () => {
                                                         color:
                                                             currentPage ===
                                                             page.name
+                                                                .split(" ")
+                                                                .join("")
                                                                 ? theme.palette
                                                                       .custom
                                                                       .light
